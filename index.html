@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FlapBet - 基于BSC的去中心化预测平台，体验体育、加密货币、电竞等多元化预测游戏" id="meta-description">
+    <meta name="keywords" content="预测平台,BSC,DeFi,区块链,体育预测,加密货币,电竞" id="meta-keywords">
+    <meta name="author" content="FlapBet Team">
+    
+     
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://FlapBet.io/">
+    <meta property="og:title" content="FlapBet - 趣味预测平台" id="og-title">
+    <meta property="og:description" content="基于BSC的去中心化预测平台，更快更省钱的预测体验" id="og-description">
+    <meta property="og:image" content="FlapBet.png">
+    
+     
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://FlapBet.io/">
+    <meta property="twitter:title" content="FlapBet - 趣味预测平台" id="twitter-title">
+    <meta property="twitter:description" content="基于BSC的去中心化预测平台，更快更省钱的预测体验" id="twitter-description">
+    <meta property="twitter:image" content="FlapBet.png">
+    
+    <title id="page-title">FlapBet - 基于BSC的去中心化预测平台</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+     
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+     
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="nav-left">
+                <a href="#" class="nav-brand">
+                    <div class="nav-brand-icon">
+                        <img src="falpbet.png" alt="Logo" class="logo-img">
+                    </div>
+                    <span>FlapBet</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-link active" data-lang="prediction-market">Prediction Market</a></li>
+                    <li><a href="#" class="nav-link" id="leaderboard-link" data-lang="leaderboard">Leaderboard</a></li>
+                    <li><a href="#" class="nav-link" id="my-predictions-link" data-lang="my-predictions">My Predictions</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <a href="https://x.com/flapbet_bsc" class="social-link">
+                    <i class="fab fa-twitter"></i>
+                    <span>Twitter</span>
+                </a>
+                <button class="theme-toggle" title="切换主题">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="language-toggle" title="Language / 语言">
+                    <i class="fas fa-globe"></i>
+                    <span class="lang-text">中文</span>
+                </button>
+                <button class="publish-btn">
+                    <i class="fas fa-plus"></i>
+                    <span data-lang="publish">Publish Prediction</span>
+                </button>
+                <button class="wallet-btn">
+                    <i class="fas fa-wallet"></i>
+                    <span class="wallet-text" data-lang="connect-wallet">Connect Wallet</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+     
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="hero-main">
+                <p class="hero-subtitle" data-lang="hero-subtitle">Smart Prediction Platform</p>
+                <h1 class="hero-title text-gradient" data-lang="hero-title">Where Memes Meet Money™</h1>
+                <p class="hero-description" data-lang="hero-description">
+                    The world's first decentralized prediction & betting entertainment platform centered around Meme culture.
+                </p>
+                <div class="hero-actions">
+                    <button class="hero-btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        <span data-lang="start-prediction">Start Prediction</span>
+                    </button>
+                    <button class="hero-btn-secondary wallet-btn" id="chat-room-btn">
+                        <i class="fas fa-comments"></i>
+                        <span data-lang="chat-room">Chat Room</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+         
+        <div class="search-container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" data-lang-placeholder="search-placeholder" placeholder="Search prediction markets...">
+            </div>
+        </div>
+
+         
+        <div class="category-nav">
+            <button class="category-btn active" data-category="all" data-lang="category-all">All</button>
+            <button class="category-btn" data-category="sports" data-lang="category-sports">Sports</button>
+            <button class="category-btn" data-category="finance" data-lang="category-finance">Finance & Blockchain</button>
+            <button class="category-btn" data-category="gaming" data-lang="category-gaming">Gaming & Esports</button>
+            <button class="category-btn" data-category="social" data-lang="category-social">Social Trends</button>
+            <button class="category-btn" data-category="entertainment" data-lang="category-entertainment">Random Entertainment</button>
+            <button class="category-btn" data-category="knowledge" data-lang="category-knowledge">Knowledge & Prediction</button>
+            <button class="category-btn" data-category="other" data-lang="category-other">Other</button>
+        </div>
+    </section>
+
+     
+    <section class="banner-section">
+        <div class="banner-container">
+            <div class="banner-slide active">
+                <div class="banner-content">
+                    <h3 data-lang="banner-title-1">🎯 Social Entertainment Center</h3>
+                    <p data-lang="banner-desc-1">FlapBet is not just a DApp. It's a social entertainment center.</p>
+                </div>
+            </div>
+            <div class="banner-slide">
+                <div class="banner-content">
+                    <h3 data-lang="banner-title-2">💎 预测您所知所爱</h3>
+                    <p data-lang="banner-desc-2">预测您所知所爱： 体育、加密货币、电竞、流行文化！</p>
+                </div>
+            </div>
+            <div class="banner-slide">
+                <div class="banner-content">
+                    <h3 data-lang="banner-title-3">🚀 更快更省钱</h3>
+                    <p data-lang="banner-desc-3">厌倦高费用？FlapBet基于BSC，预测更快更省钱。</p>
+                </div>
+            </div>
+        </div>
+        <div class="banner-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+     
+    <section class="games-section">
+        <div class="section-header">
+            <div>
+                <h2 class="section-title" data-lang="hot-predictions-title">🎮 热门预测</h2>
+                <p class="section-subtitle" data-lang="hot-predictions-subtitle">发现最新最热门的预测，参与其中赢取丰厚奖励</p>
+            </div>
+            <button class="view-all-btn" data-lang="view-all-btn">
+                查看全部
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+        
+        <div class="games-grid" id="gamesGrid">
+             
+        </div>
+
+         
+        <div class="pagination">
+            <button class="pagination-btn" id="prevBtn" disabled>
+                <i class="fas fa-chevron-left"></i>
+                <span data-lang="prev-page">上一页</span>
+            </button>
+            <div class="pagination-info">
+                <span id="currentPage">1</span> / <span id="totalPages">1</span>
+            </div>
+            <button class="pagination-btn" id="nextBtn">
+                <span data-lang="next-page">下一页</span>
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+
+     
+    <footer class="footer">
+        <div class="footer-content">
+            <p data-lang="copyright-text">&copy; 2025 FlapBet 版权所有</p>
+        </div>
+    </footer>
+
+     
+    <div id="publishModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 data-lang="publish-prediction-title">Publish Prediction</h2>
+                <span class="close-btn">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="publishForm">
+                    <div class="form-group">
+                        <label for="predictionImage" data-lang="upload-image-label">Upload Image</label>
+                        <div class="image-upload-container">
+                            <input type="file" id="predictionImage" name="predictionImage" accept=".jpg,.jpeg,.png,.gif,.webp" style="display: none;">
+                            <div class="image-upload-area" id="imageUploadArea">
+                                <div class="upload-placeholder">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <p data-lang="click-upload-image">Click to upload image</p>
+                                    <span class="upload-hint" data-lang="upload-image-hint">Support JPG, PNG formats, 1:1 ratio, max 100KB</span>
+                                </div>
+                                <div class="image-preview" id="imagePreview" style="display: none;">
+                                    <img id="previewImg" src="" alt="预览图片">
+                                    <button type="button" class="remove-image-btn" id="removeImageBtn">&times;</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="predictionTitle" data-lang="prediction-title-label">Prediction Title</label>
+                        <input type="text" id="predictionTitle" name="predictionTitle" data-lang-placeholder="prediction-title-placeholder" placeholder="e.g.: Will BNB break $1200 by tomorrow 12 PM?" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="predictionOptions" data-lang="options-setting-label">Options Setting</label>
+                        <div class="options-container">
+                            <input type="text" class="option-input" data-lang-placeholder="option-1-placeholder" placeholder="Option 1: Yes" required>
+                            <input type="text" class="option-input" data-lang-placeholder="option-2-placeholder" placeholder="Option 2: No" required>
+                        </div>
+                        <button type="button" class="add-option-btn" data-lang="add-option-btn">+ Add Option</button>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="endTime" data-lang="end-time-label">End Time</label>
+                        <input type="datetime-local" id="endTime" name="endTime" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="commissionRate" data-lang="commission-rate-label">Commission Rate (%)</label>
+                        <input type="number" id="commissionRate" name="commissionRate" min="0" max="5" step="0.1" data-lang-placeholder="commission-rate-placeholder" placeholder="0-5%" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="predictionType" data-lang="prediction-type-label">Prediction Type</label>
+                        <select id="predictionType" name="predictionType" required>
+                            <option value="" data-lang="please-select">Please select</option>
+                            <option value="objective" data-lang="objective-event">Objective Event</option>
+                            <option value="subjective" data-lang="subjective-event">Subjective Event</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="verificationMethod" data-lang="verification-method-label">Event Verification Method</label>
+                        <select id="verificationMethod" name="verificationMethod" required>
+                            <option value="" data-lang="please-select">Please select</option>
+                            <option value="auto" data-lang="auto-verification">Auto Verification</option>
+                            <option value="manual" data-lang="vote-verification">Vote Verification</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="deposit" data-lang="deposit-label">Deposit (Optional)</label>
+                        <input type="number" id="deposit" name="deposit" data-lang-placeholder="deposit-placeholder" placeholder="To incentivize honest behavior">
+                    </div>
+                    
+                    <div class="form-actions">
+                        <div class="fee-notice">
+                            <span class="fee-text" data-lang="prediction-fee-notice">Prediction fee requires 1000 tokens</span>
+                        </div>
+                        <div class="action-buttons">
+                            <button type="button" class="cancel-btn" data-lang="cancel-btn">Cancel</button>
+                            <button type="submit" class="submit-btn" data-lang="publish-prediction-btn">Publish Prediction</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+     
+    <div class="modal" id="detailModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content detail-modal-content">
+            <div class="modal-header">
+                <h3 data-lang="prediction-details-title">Prediction Details</h3>
+                <button class="close-btn" id="closeDetailBtn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="detail-content">
+                     
+                    <div class="detail-section">
+                        <div class="detail-image">
+                            <img id="detailImage" src="" data-lang-alt="prediction-image-alt" alt="竞猜图片">
+                        </div>
+                        <div class="detail-info">
+                            <h2 id="detailTitle">竞猜标题</h2>
+                            <div class="detail-meta">
+                                <div class="meta-item">
+                                    <span class="meta-label" data-lang="creator-label">Creator:</span>
+                                    <span id="detailCreator">0x1234...5678</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label" data-lang="end-time-label">End Time:</span>
+                                    <span id="detailEndTime">2024-01-15 18:00</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label" data-lang="commission-rate-label">Commission Rate:</span>
+                                    <span id="detailCommission">2.5%</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label" data-lang="total-prize-pool-label">Total Prize Pool:</span>
+                                    <span id="detailPrizePool">12,500 代币</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     
+                    <div class="detail-section">
+                        <h3 data-lang="participate-prediction-title">Participate in Prediction</h3>
+                        <div class="betting-options" id="bettingOptions">
+                             
+                        </div>
+                    </div>
+
+                     
+                    <div class="detail-section">
+                        <h3 data-lang="my-bet-title">My Bet</h3>
+                        <div class="betting-form">
+                            <div class="selected-option">
+                                <span data-lang="selected-option-label">Selected Option: </span>
+                                <span id="selectedOption" data-lang="please-select-option">Please select an option first</span>
+                            </div>
+                            <div class="bet-amount">
+                                <label for="betAmount" data-lang="bet-amount-label">Bet Amount:</label>
+                                <input type="number" id="betAmount" data-lang-placeholder="bet-amount-placeholder" placeholder="Enter bet amount" min="1">
+                                <span class="currency" data-lang="tokens">Tokens</span>
+                            </div>
+                            <div class="expected-return">
+                                <span data-lang="expected-return-label">Expected Return: </span>
+                                <span id="expectedReturn">0 <span data-lang="tokens">Tokens</span></span>
+                            </div>
+                            <button class="bet-btn" id="placeBetBtn" disabled data-lang="confirm-bet-btn">Confirm Bet</button>
+                        </div>
+                    </div>
+
+                     
+                    <div class="detail-section">
+                        <h3 data-lang="prediction-stats-title">Prediction Statistics</h3>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-value" id="totalParticipants">156</div>
+                                <div class="stat-label" data-lang="participants-count-label">Participants</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value" id="totalBets">2,340</div>
+                                <div class="stat-label" data-lang="total-bets-label">Total Bets</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value" id="averageBet">53.4</div>
+                                <div class="stat-label" data-lang="average-bet-label">Average Bet</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value" id="timeRemaining">2天 5小时</div>
+                                <div class="stat-label" data-lang="time-remaining-label">Time Remaining</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     
+    <div class="modal" id="warningModal">
+        <div class="modal-content warning-modal">
+            <div class="warning-header">
+                <h3 data-lang="warning-title">Notice</h3>
+            </div>
+            <div class="warning-body">
+                <p data-lang="warning-message">Currently unavailable during internal phase</p>
+                <p class="warning-desc" data-lang="warning-desc">The current betting is in the internal phase and cannot accept bets temporarily.</p>
+            </div>
+            <div class="warning-footer">
+                <button class="warning-btn" id="warningConfirmBtn" data-lang="warning-confirm">Got it</button>
+            </div>
+        </div>
+    </div>
+
+     
+    <div class="chat-modal-overlay" id="chatModalOverlay" style="display: none;">
+        <div class="chat-modal" id="chatModal" style="display: none;">
+            <div class="chat-header">
+                <div class="chat-title">
+                    <i class="fas fa-comments"></i>
+                    <span data-lang="chat-room-title">FlapBet Chat Room</span>
+                    <div class="online-count">
+                        <i class="fas fa-circle online-indicator"></i>
+                        <span id="onlineCount">127</span> <span data-lang="online">Online</span>
+                    </div>
+                </div>
+                <button class="close-btn" id="closeChatBtn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="chat-body">
+                 
+                <div class="chat-loading" id="chatLoading">
+                    <div class="loading-spinner"></div>
+                    <p data-lang="chat-connecting">正在连接聊天室...</p>
+                </div>
+                
+                 
+                <div class="chat-content" id="chatContent" style="display: none;">
+                     
+                    <div class="chat-sidebar">
+                        <div class="sidebar-tabs">
+                            <button class="tab-btn active" data-tab="userPanel">
+                                <i class="fas fa-users"></i>
+                                <span data-lang="chat-users-tab">Users</span>
+                            </button>
+                            <button class="tab-btn" data-tab="roomPanel">
+                                <i class="fas fa-comments"></i>
+                                <span data-lang="chat-channels-tab">Channels</span>
+                            </button>
+                        </div>
+                        
+                        <div class="tab-content">
+                            <div class="tab-panel active" id="userPanel">
+                                <div class="user-list" id="userList">
+                                     
+                                </div>
+                            </div>
+                            <div class="tab-panel" id="roomPanel">
+                                <div class="room-list">
+                                    <div class="room-item active">
+                                        <i class="fas fa-hashtag"></i>
+                                        <span data-lang="chat-room-lobby">Lobby</span>
+                                        <span class="room-count">127</span>
+                                    </div>
+                                    <div class="room-item">
+                                        <i class="fas fa-football-ball"></i>
+                                        <span data-lang="chat-room-football">Football Prediction</span>
+                                        <span class="room-count">45</span>
+                                    </div>
+                                    <div class="room-item">
+                                        <i class="fas fa-basketball-ball"></i>
+                                        <span data-lang="chat-room-basketball">Basketball Prediction</span>
+                                        <span class="room-count">32</span>
+                                    </div>
+                                    <div class="room-item">
+                                        <i class="fas fa-chart-line"></i>
+                                        <span data-lang="chat-room-stock">Stock Prediction</span>
+                                        <span class="room-count">28</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                     
+                    <div class="chat-main">
+                        <div class="chat-messages" id="chatMessages">
+                             
+                        </div>
+                        
+                        <div class="chat-input-area">
+                            <div class="input-toolbar">
+                                <button class="toolbar-btn" data-action="emoji" title="表情">
+                                    <i class="fas fa-smile"></i>
+                                </button>
+                                <button class="toolbar-btn" data-action="image" title="图片">
+                                    <i class="fas fa-image"></i>
+                                </button>
+                                <button class="toolbar-btn" data-action="gif" title="GIF">
+                                    <i class="fas fa-film"></i>
+                                </button>
+                                <button class="toolbar-btn" data-action="redpack" title="红包">
+                                    <i class="fas fa-gift"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="input-container">
+                                <input type="text" id="chatInput" data-lang-placeholder="chat-input-placeholder" placeholder="Type a message... Press Enter to send">
+                                <button class="send-btn" id="sendBtn">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
